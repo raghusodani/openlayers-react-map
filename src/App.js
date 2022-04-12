@@ -37,8 +37,7 @@ function addMarkers(lonLatArray) {
 
 const App = () => {
   const [center, setCenter] = useState(mapConfig.center);
-  const [zoom, setZoom] = useState(9);
-
+  const [zoom, setZoom] = useState(12);
   const [showLayer1, setShowLayer1] = useState(true);
   const [showLayer2, setShowLayer2] = useState(true);
   const [showMarker, setShowMarker] = useState(false);
@@ -57,7 +56,7 @@ const App = () => {
                   featureProjection: get("EPSG:3857"),
                 }),
               })}
-              style={FeatureStyles.MultiPolygon}
+              style={FeatureStyles.MultiPolygon1}
             />
           )}
           {showLayer2 && (
@@ -67,7 +66,7 @@ const App = () => {
                   featureProjection: get("EPSG:3857"),
                 }),
               })}
-              style={FeatureStyles.MultiPolygon}
+              style={FeatureStyles.MultiPolygon2}
             />
           )}
           {showMarker && <VectorLayer source={vector({ features })} />}
@@ -82,7 +81,7 @@ const App = () => {
           checked={showLayer1}
           onChange={(event) => setShowLayer1(event.target.checked)}
         />{" "}
-        Johnson County
+        Sector 28
       </div>
       <div>
         <input
@@ -90,7 +89,7 @@ const App = () => {
           checked={showLayer2}
           onChange={(event) => setShowLayer2(event.target.checked)}
         />{" "}
-        Wyandotte County
+        Gandhinagar
       </div>
       <hr />
       <div>

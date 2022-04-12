@@ -20,9 +20,18 @@ export default {
       color: "rgba(0, 0, 255, 0.1)",
     }),
   }),
-  MultiPolygon: new Style({
+  MultiPolygon1: new Style({
     stroke: new Stroke({
       color: "blue",
+      width: 1,
+    }),
+    fill: new Fill({
+      color: "rgba(0, 0, 255, 0.1)",
+    }),
+  }),
+  MultiPolygon2: new Style({
+    stroke: new Stroke({
+      color: "red",
       width: 1,
     }),
     fill: new Fill({
